@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+
+  display: grid;
+  justify-content: center;
+  margin: 2rem; 
+
+  animation: card .8s forwards;
+  opacity: 0;  
+  
+}
+
+@keyframes card {
+  0% {
+    transform: translate(100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+article {
+  display: grid;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.produto-infor {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(228, 12%, 48%);
+
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.produto-infor > span {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.produto-titulo {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  color: hsl(212, 21%, 14%);
+}
+
+.produto-infor > p {
+  line-height: 1.7rem;
+}
+
+.produto-preco {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.preco {
+  color: hsl(158, 36%, 37%);
+  font-size: 2rem;
+  font-family: 'Fraunces', serif;
+}
+
+.original-preco {
+  text-decoration: line-through;
+}
+
+.produto-butao {
+  background-color: hsl(158, 36%, 37%);
+  text-decoration: none;
+    color: hsl(0, 0%, 100%);
+  border-radius: 0.8rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem 2rem;
+}
+
+.produto-butao:hover {
+  background-color:hsl(158, 36%, 20%)
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 600px) {
+  article {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+}
+
